@@ -1,6 +1,7 @@
 # action.yml
 name: 'Deploy Lambda'
 description: 'Deploys repo code into AWS Lambda'
+author: 'Vysakh P Pillai'
 inputs:
   access-key-id:  
     description: 'AWS Access Key ID'
@@ -17,15 +18,13 @@ inputs:
   zip-file:  
     description: 'Zip File to deploy'
     required: true
-outputs:
-  revision-id: 
-    description: 'Lambda revision ID'
+
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.access-key-id }}
-    - ${{ inputs.access-keey-secret }}
+    - ${{ inputs.access-key-secret }}
     - ${{ inputs.region }}
     - ${{ inputs.lambda-name }}
