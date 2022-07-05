@@ -14,9 +14,9 @@ RUN apk add --no-cache \
         awscli \
     && rm -rf /var/cache/apk/*
 
-RUN aws --version   # Just to make sure its installed alright
+# Just to make sure its installed alright
+RUN aws --version   
 
-# Should output aws-cli/1.18.69 etc.
-
+RUN chmod +x entrypoint.sh
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
