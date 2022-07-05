@@ -1,5 +1,5 @@
 # action.yml
-name: 'Deploy Lambda'
+name: 'Deploy AWS Lambda'
 description: 'Deploys repo code into AWS Lambda'
 author: 'Vysakh P Pillai'
 inputs:
