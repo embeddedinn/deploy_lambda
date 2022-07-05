@@ -1,5 +1,4 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+AWS_ACCESS_KEY_ID=$1 AWS_SECRET_ACCESS_KEY =$2 AWS_DEFAULT_REGION=$3 \
+aws lambda update-function-code --function-name \"$4\" 
