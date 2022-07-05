@@ -28,3 +28,4 @@ runs:
     - ${{ inputs.access-key-secret }}
     - ${{ inputs.region }}
     - ${{ inputs.lambda-name }}
+    - ${{ inputs.zip-file }}
