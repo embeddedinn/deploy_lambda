@@ -2,6 +2,7 @@
 name: 'Deploy AWS Lambda'
 description: 'Deploys repo code into AWS Lambda'
 author: 'Vysakh P Pillai'
+color: yellow 
 inputs:
   access-key-id:  
     description: 'AWS Access Key ID'
